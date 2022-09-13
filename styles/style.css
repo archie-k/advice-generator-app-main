@@ -16,10 +16,8 @@ body {
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     /* justify-content: space-around; */
+    /* position: relative; */
     padding: 20px;
     height: 320px;
     width: 550px;
@@ -27,19 +25,30 @@ body {
     border-radius: 20px;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .advice-id {
     margin-top: 15px;
     color: hsl(150, 100%, 66%);
+    text-align: center;
     font-size: 12px;
     letter-spacing: 5px;
 }
 
 .quote-text-container {
-    text-align: center;
-    margin: 30px 0px
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
 }
 
 .quote-text {
+    text-align: center;
     color: hsl(193, 38%, 86%);
     font-size: 24px;
     letter-spacing: 1px;
@@ -48,7 +57,11 @@ body {
 
 .seperator {
     transform: scale(.9);
-    
+    text-align: center;
+}
+
+.dice {
+    transform: scale(.8);
 }
 
 .dice-btn {   
@@ -57,13 +70,32 @@ body {
     justify-content: center;
     height: 45px;
     width: 45px;
-    position: absolute;
-    top: 780px;
+    margin: auto;
+    position: relative;
+    bottom: -60px;
     background-color: hsl(150, 100%, 66%);;
     border-radius: 40px;
     border: 0px;
 }
 
+
 .dice-btn:hover {
     cursor: pointer;
 }
+
+.dice-btn:active {
+    -moz-box-shadow: 0 0 12px hsl(150, 100%, 66%);
+    -webkit-box-shadow: 0 0 12px hsl(150, 100%, 66%);
+    box-shadow: 0 0 12px hsl(150, 100%, 66%);
+}
+
+@media screen and (max-width: 500px) {
+    .seperator {
+      transform: scale(.8);
+    }
+
+    .quote-text {
+        font-size: 18px;
+    }
+
+  }
